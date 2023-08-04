@@ -2,7 +2,7 @@
 FROM alpine:latest
 MAINTAINER Ilkka Kujamaki ikujamaki@gmail.com
 
-RUN apk update && \
+RUN apk update && apk upgrade && \
     apk add bash gawk cyrus-sasl cyrus-sasl-login cyrus-sasl-crammd5 mailx \
     postfix && \
     rm -rf /var/cache/apk/* && \
