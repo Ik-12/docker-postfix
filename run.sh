@@ -2,6 +2,9 @@
 
 [ "${DEBUG}" == "yes" ] && set -x
 
+apk update
+apk upgrade
+
 function add_config_value() {
   local key=${1}
   local value=${2}
