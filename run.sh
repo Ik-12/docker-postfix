@@ -53,7 +53,7 @@ if [ "${SMTP_PORT}" = "465" ]; then
 fi
 
 # Bind to both IPv4 and IPv4
-add_config_value "inet_protocols" "all"
+add_config_value "inet_protocols" "ipv4"
 
 # Create sasl_passwd file with auth credentials
 if [ ! -f /etc/postfix/sasl_passwd -a ! -z "${SMTP_USERNAME}" ]; then
